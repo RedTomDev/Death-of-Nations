@@ -1,0 +1,405 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_USA_CONGRESS}
+
+focus_tree = {
+	id = usa_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = USA
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = USA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+#	focus = {
+#		id = USA_
+#		#icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	#INITIAL TREE
+
+	focus = {
+		id = USA_check_our_wounds
+		icon = GFX_focus_generic_self_management
+		x = 12
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = anarchism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = USA_count_the_ammo
+		icon = GFX_focus_generic_self_management
+		x = 11
+		y = 1
+
+		cost = 1
+		prerequisite = { focus = USA_check_our_wounds }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = anarchism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+		focus = {
+		id = USA_count_the_dead
+		icon = GFX_focus_generic_self_management
+		x = 11
+		y = 2
+
+		cost = 1
+		prerequisite = { focus = USA_check_our_wounds }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = anarchism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+		focus = {
+		id = USA_count_the_orphaned
+		icon = GFX_focus_generic_self_management
+		x = 13
+		y = 2
+
+		cost = 1
+		prerequisite = { focus = USA_count_the_homeless }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = anarchism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+			focus = {
+		id = USA_count_the_homeless
+		icon = GFX_focus_generic_self_management
+		x = 13
+		y = 1
+
+		cost = 1
+		prerequisite = { focus = USA_check_our_wounds }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = anarchism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+		focus = {
+		id = USA_the_price_of_revolution
+		icon = GFX_focus_generic_self_management
+		x = 12
+		y = 3
+
+		cost = 1
+		prerequisite = { focus = USA_count_the_dead }
+		prerequisite = { focus = USA_count_the_orphaned }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = anarchism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+		#RECONSTRUCTION TREE
+	
+			focus = {
+		id = USA_begin_reconstruction
+		icon = GFX_focus_generic_self_management
+		x = 9
+		y = 4
+
+		cost = 1
+		prerequisite = { focus = USA_the_price_of_revolution }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = anarchism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+				focus = {
+		id = USA_form_the_union_vangaurd
+		icon = GFX_focus_generic_self_management
+		x = 7
+		y = 5
+
+		cost = 1
+		prerequisite = { focus = USA_begin_reconstruction }
+		mutually_exclusive = { focus = USA_enshrine_unions }
+		mutually_exclusive = { focus = USA_end_the_unions }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = anarchism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+					focus = {
+		id = USA_enshrine_unions
+		icon = GFX_focus_generic_self_management
+		x = 9
+		y = 5
+
+		cost = 1
+		prerequisite = { focus = USA_begin_reconstruction }
+		mutually_exclusive = { focus = USA_end_the_unions }
+		mutually_exclusive = { focus = USA_form_the_union_vangaurd }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = anarchism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+					focus = {
+		id = USA_end_the_unions
+		icon = GFX_focus_generic_self_management
+		x = 11
+		y = 5
+
+		cost = 1
+		prerequisite = { focus = USA_begin_reconstruction }
+		mutually_exclusive = { focus = USA_enshrine_unions }
+		mutually_exclusive = { focus = USA_form_the_union_vangaurd }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = anarchism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+		#MILITARY REFORM TREE
+	
+						focus = {
+		id = USA_rebuild_the_militia
+		icon = GFX_focus_generic_self_management
+		x = 15
+		y = 4
+
+		cost = 1
+		prerequisite = { focus = USA_the_price_of_revolution }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = anarchism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+}
