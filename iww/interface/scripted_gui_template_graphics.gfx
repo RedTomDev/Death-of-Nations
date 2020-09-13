@@ -1,0 +1,15 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_scripted_gui_window_background"
+		textureFile = "/gfx/interface/scripted_gui_graphics/scripted_gui_background.dds"
+	}
+		spriteType = {
+		name = "GFX_fed_collapse"
+		textureFile = "/gfx/interface/scripted_gui_graphics/big_news_images/federal_collapse.tga"
+	}
+		spriteType = {
+		name = "GFX_big_news_button"
+		textureFile = "/gfx/interface/button_reset_123x34.dds"
+	}
+}

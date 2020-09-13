@@ -260,15 +260,14 @@ set_convoys = 500
 
 
 set_politics = {
-	ruling_party = anarchism
+	ruling_party = democratic
 	last_election = "1932.11.8"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
 	anarchism = 45
-	democratic = 30
-	fascism = 25
+	democratic = 55
 }
 
 add_ideas = {
@@ -296,17 +295,6 @@ set_autonomy = {
 }
 
 create_country_leader = {
-	name = "Franklin Delano Roosevelt"
-	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-	picture = "Portrait_USA_Franklin_Roosevelt.dds"
-	expire = "1947.1.1"
-	ideology = liberalism
-	traits = {
-		dislikes_germany
-	}
-}
-
-create_country_leader = {
 	name = "William Dudley Pelley"
 	desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
 	picture = "Portrait_USA_William_Dudley_Pelley.dds"
@@ -318,11 +306,11 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Elizabeth Gurely Flynn"
+	name = "President Monke"
 	desc = ""
-	picture = "portrait_USA_earl_browder.dds"
+	picture = "presidentmonke.dds"
 	expire = "1965.1.1"
-	ideology = syndicalism
+	ideology = conservatism
 	traits = {
 		
 	}

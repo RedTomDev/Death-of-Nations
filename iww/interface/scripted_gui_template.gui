@@ -1,0 +1,67 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "new_scripted_gui_window"
+		position = { x = 0 y = 0}	
+		size = { width = 800 height= 650 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+		
+		background = {
+			name = "Background"		 
+			quadTextureSprite ="GFX_scripted_gui_window_background"
+		}
+
+		iconType ={
+			name ="fed_collapse_image"
+			spriteType = "GFX_fed_collapse"
+			position = { x= 113 y = 71 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		buttonType ={
+			name ="big_news_button"
+			spriteType = "GFX_big_news_button"
+			position = { x= 338 y = 525 }
+			Orientation = "UPPER_LEFT"
+		}	
+
+		instantTextboxType = {
+			name = "big_news_button_text"
+			position = { x = 370 y = 535 }
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "big_news_button_bad"
+			maxWidth = 55
+			maxHeight = 36
+			fixedsize = yes
+		}
+
+				instantTextboxType = {
+			name = "big_news_title"
+			position = { x = 150 y = 100 }
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "fed_collapse_headline"
+			maxWidth = 500
+			maxHeight = 36
+			fixedsize = yes
+		}
+
+				instantTextboxType = {
+			name = "big_news_quote"
+			position = { x = 150 y = 450 }
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "fed_collapse_quote"
+			maxWidth = 500
+			maxHeight = 50
+			fixedsize = yes
+		}
+	}
+}
